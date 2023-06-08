@@ -2,19 +2,27 @@ import { useEffect } from 'react'
 import { SafeAreaProvider, } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, View, StatusBar } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
+import { LocaleConfig } from 'react-native-calendars';
 import { store } from './store';
 import CombineRoute from './CombineRoute';
 import deepLinking from './deepLinking';
-import { StatusBar } from 'react-native';
+
+LocaleConfig.locales['en'] = {
+  formatAccessibilityLabel: "dddd d 'of' MMMM 'of' yyyy",
+  monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  monthNamesShort: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+  dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+};
+LocaleConfig.defaultLocale = 'en';
 
 const App = () => {
 
   useEffect(() => {
     SplashScreen.hide();
   }, [])
-
 
   return (
     <Provider store={store}>

@@ -21,10 +21,10 @@ const RegisterScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const [value, setValue] = useState({
-    name: 'Prem Biswas',
-    mobile: '9078563412',
-    email: 'prembiswas@gmail.com',
-    password: 'Prem_2@@1'
+    name: '',
+    mobile: '',
+    email: '',
+    password: ''
   });
 
   const onSubmit = () => {
@@ -56,10 +56,10 @@ const RegisterScreen = ({ navigation }) => {
               <Input keyboardType={'default'} value={value?.name} onChangeText={(Text) => setValue({ ...value, name: Text })} size="md" variant={'unstyled'} placeholder='Name' InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="muted.400" />} />
             </View>
             <View style={{ marginTop: 10, width: '100%', backgroundColor: '#E2E2FD', borderRadius: 5 }}>
-              <Input keyboardType={'number-pad'} maxLength={10} value={value?.mobile} onChangeText={(Text) => setValue({ ...value, mobile: Text })} size="md" variant={'unstyled'} placeholder='Mobile' InputLeftElement={<Icon as={<MaterialCommunityIcons name="email-open" />} size={5} ml="2" color="muted.400" />} />
+              <Input keyboardType={'number-pad'} maxLength={10} value={value?.mobile} onChangeText={(Text) => setValue({ ...value, mobile: Text })} size="md" variant={'unstyled'} placeholder='Mobile' InputLeftElement={<Icon as={<Octicons name="device-mobile" />} size={5} ml="2" color="muted.400" />} />
             </View>
             <View style={{ marginTop: 10, width: '100%', backgroundColor: '#E2E2FD', borderRadius: 5 }}>
-              <Input keyboardType={'email-address'} value={value?.email} onChangeText={(Text) => setValue({ ...value, email: Text })} size="md" variant={'unstyled'} placeholder='Emial' InputLeftElement={<Icon as={<Octicons name="device-mobile" />} size={5} ml="2" color="muted.400" />} />
+              <Input keyboardType={'email-address'} value={value?.email} onChangeText={(Text) => setValue({ ...value, email: Text })} size="md" variant={'unstyled'} placeholder='Emial' InputLeftElement={<Icon as={<MaterialCommunityIcons name="email-open" />} size={5} ml="2" color="muted.400" />} />
             </View>
             <View style={{ marginTop: 10, width: '100%', backgroundColor: '#E2E2FD', borderRadius: 5 }}>
               <Input value={value?.password} onChangeText={(Text) => setValue({ ...value, password: Text })} size="md" type={show ? "text" : "password"} variant={'unstyled'} placeholder='Password' InputLeftElement={<Icon as={<FontAwesome name="lock" />} size={5} ml="2" color="muted.400" />} InputRightElement={<Pressable onPress={() => setShow(!show)}>

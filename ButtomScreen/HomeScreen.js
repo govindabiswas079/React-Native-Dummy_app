@@ -54,8 +54,8 @@ const HomeScreen = ({ navigation }) => {
               </View>
             </Appbar>
 
-            <Button title='title' onPress={() => navigation.navigate('UserScreen')} />
-            <Button title='title' onPress={() => navigation.navigate('UserPostScreen')} />
+            <Button title='Timeline Flatlist' onPress={() => navigation.navigate('UserScreen')} />
+            <Button title='React Native Calender' onPress={() => navigation.navigate('UserPostScreen')} />
 
           </ScrollView>
         </View>

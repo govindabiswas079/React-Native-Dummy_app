@@ -43,10 +43,10 @@ const LoginScreen = ({ navigation }) => {
 
       <View style={{ paddingHorizontal: 15, width: '100%' }}>
         <View style={{ marginTop: 10, width: '100%', backgroundColor: '#E2E2FD', borderRadius: 5 }}>
-          <Input value={'prembiswas@gmail.com'} size="md" variant={'unstyled'} placeholder='Emial' InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="muted.400" />} />
+          <Input keyboardType={'email-address'} autoCapitalize={'none'} variant={'unstyled'} placeholder='Emial' InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="muted.400" />} />
         </View>
         <View style={{ marginTop: 10, width: '100%', backgroundColor: '#E2E2FD', borderRadius: 5 }}>
-          <Input value={'Prem_2@@1'} size="md" type={show ? "text" : "password"} variant={'unstyled'} placeholder='Password' InputLeftElement={<Icon as={<FontAwesome name="lock" />} size={5} ml="2" color="muted.400" />} InputRightElement={<Pressable onPress={() => setShow(!show)}>
+          <Input autoCapitalize={'none'} type={show ? "text" : "password"} variant={'unstyled'} placeholder='Password' InputLeftElement={<Icon as={<FontAwesome name="lock" />} size={5} ml="2" color="muted.400" />} InputRightElement={<Pressable onPress={() => setShow(!show)}>
             <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="muted.400" />
           </Pressable>} />
         </View>
